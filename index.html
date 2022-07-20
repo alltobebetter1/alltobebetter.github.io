@@ -58,3 +58,24 @@
 <p style="text-align: center;" data-pid="zhGzvndI">&nbsp;</p>
 <p style="text-align: center;" data-pid="zhGzvndI"><span style="font-size: 36pt;">Whatever</span></p>
 <p style="text-align: center;" data-pid="zhGzvndI">If life brings us pain, then we become life.</p>
+<-- 引入 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+<-- 添加一个容器-->
+<div id="gitalk-container"></div>
+
+<-- 生成 gitalk 插件-->
+var gitalk = new Gitalk({
+  clientID: 'f26cea36b298f7d7a171', //Client ID
+
+  clientSecret: 'cc75d95a95f25c3ba0246e3e77b6b679004d25de', //Client Secret
+
+  repo: 'alltobebetter.github.io',//仓库名称
+  owner: 'alltobebetter1',//仓库拥有者
+  admin: ['alltobebetter1'],
+  id: location.href,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')
